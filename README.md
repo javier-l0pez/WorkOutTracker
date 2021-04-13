@@ -1,6 +1,8 @@
 # WorkOutTracker
 
-An Android app designed to keep track of common workouts or own custom ones. Common workouts will be managed by the administration of the app whilst users will create their own saving them onto their Google profile upon Firestore in Firebase.
+An Android app designed to keep track of common workouts or own custom ones. Users will be able to log in order to access a list of already defined workouts, this list will only be editable by admin users. Also there will be a list of custom exercises in which the users will be able to add new exercises just for themselves
+. A stopwatch to keep track of exercises, and a way to export performed exercises.
+
 
 ## Technologies
 
