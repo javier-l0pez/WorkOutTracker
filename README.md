@@ -13,4 +13,4 @@ Firebase and firestorage for login and storage of workouts.
 
 ## Mockup
 
-![Mockup](https://github.com/javier-l0pez/WorkOutTracker/blob/main/Mockup.png)
+![Mockup](https://github.com/javier-l0pez/WorkOutTracker/blob/main/Screenshots/Mockup.png)
