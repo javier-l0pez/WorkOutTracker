@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/op_signout"
+        android:title="Sign Out" />
+    <item
+        android:id="@+id/op_pwork"
+        android:title="Public Workouts" />
+    <item
+        android:id="@+id/op_custom_w"
+        android:title="Custom Workouts" />
+
+</menu>

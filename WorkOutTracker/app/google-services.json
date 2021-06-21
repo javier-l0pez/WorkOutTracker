@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "349680232998",
+    "firebase_url": "https://workout-bdaec-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "workout-bdaec",
+    "storage_bucket": "workout-bdaec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349680232998:android:1425db204985a330d2d4e7",
+        "android_client_info": {
+          "package_name": "com.jls.workouttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349680232998-9og8b9joqupi7nq3t2hmrdc35ju96sgm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeQ4OKL2uTiVsASz_7WeST2pmZ2B3hxB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349680232998-9og8b9joqupi7nq3t2hmrdc35ju96sgm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
