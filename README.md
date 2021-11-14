@@ -19,13 +19,13 @@ Firebase and realtime database for login and storage of workouts.
 
 ## Goals
 
-* [X]\* Mockup
-* [] User database
-* [] Workouts database
-* [] Workouts management
-* [] Profile management
-* [] Profile pictures
-* [] Timer
-* [] Landing page
-* [] Video demonstration
+* [X] Mockup\*
+* [ ] User database
+* [ ] Workouts database
+* [ ] Workouts management
+* [ ] Profile management
+* [ ] Profile pictures
+* [ ] Timer
+* [ ] Landing page
+* [ ] Video demonstration
 
