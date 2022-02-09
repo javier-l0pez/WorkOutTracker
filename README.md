@@ -7,6 +7,7 @@ The exercise and user database is stored in Firebase. An admin account can only 
 Users will be able to update their profile, changing their profile picture, and password. Also they will be able to delete their account.
 A timer is also available from the top right corner, so the user can track how long have them worked out that exercise, or to track for how long do they rest between workouts.
 
+A [video of the app](https://youtu.be/VSRFnWqmVY8)
 
 ## Technologies
 
@@ -56,6 +57,6 @@ If one of the items in the recyclerview is to be edited, the same activity to ad
 * [X] Workouts management
 * [X] Workout pictures
 * [X] Debug APK
+* [X] Video demonstration
 * [ ] Landing page
-* [ ] Video demonstration
 
