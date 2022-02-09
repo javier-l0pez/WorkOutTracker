@@ -46,7 +46,13 @@ public class RegisterActivity extends AppCompatActivity {
             myRef = fdb.getReference().child("user");
             fAuth = FirebaseAuth.getInstance();
 
-            if ((!textEmail.getText().toString().isEmpty()) && (!textPass.getText().toString().isEmpty()) && (textPass.length() >= 6)) {
+            if (textPass.length() < 6) {
+                Snackbar.make(v, R.string.pass_leng, Snackbar.LENGTH_LONG).show();
+            } else if (textUsername.getText().toString().isEmpty()) {
+                Snackbar.make(v, R.string.usrn_emp, Snackbar.LENGTH_LONG).show();
+            } else if (textPass.equals(textConPass.getText().toString())) {
+                Snackbar.make(v, R.string.pass_match, Snackbar.LENGTH_LONG).show();
+            } else if ((!textEmail.getText().toString().isEmpty()) && (!textPass.getText().toString().isEmpty()) && (textPass.length() >= 6) && !textUsername.getText().toString().isEmpty()) {
                 fAuth.createUserWithEmailAndPassword(textEmail.getText().toString(), textPass.getText().toString())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
@@ -59,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 newUser.setAdmin(false);
 
                                 myRef.child(newUser.getId()).setValue(newUser);
-                                Toast.makeText(RegisterActivity.this, "Signup successful", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterActivity.this, R.string.sgnup_succ, Toast.LENGTH_LONG).show();
 
                                 fAuth.signInWithEmailAndPassword(textEmail.getText().toString(), textPass.getText().toString()).addOnCompleteListener(task1 -> {
                                     if (task1.isSuccessful()) {
@@ -67,20 +73,17 @@ public class RegisterActivity extends AppCompatActivity {
                                         startActivity(intent);
 
                                     } else {
-                                        Toast.makeText(RegisterActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, R.string.login_fai, Toast.LENGTH_SHORT).show();
                                     }
                                 });
 
                                 finish();
                             } else {
-                                Toast.makeText(RegisterActivity.this, "Signup failed", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterActivity.this, R.string.sgnup_fl, Toast.LENGTH_LONG).show();
                             }
                         });
-
-            } else if ((!textEmail.getText().toString().isEmpty()) && (!textPass.getText().toString().isEmpty()) && (textPass.length() < 6)) {
-                Snackbar.make(v, "Password must be at least 6 characters length.", Snackbar.LENGTH_LONG).show();
             } else {
-                Snackbar.make(v, "Email and password must be filled.", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(v, R.string.mailpassfill, Snackbar.LENGTH_LONG).show();
             }
         });
 

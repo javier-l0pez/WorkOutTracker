@@ -37,4 +37,10 @@
     <string name="per_wk">Ejercicios personales</string>
     <string name="img_set">Establecer imagen</string>
     <string name="ex_del">Eliminar</string>
+    <string name="sgnup_succ">Registro exitoso</string>
+    <string name="sgnup_fl">Registro fallido</string>
+    <string name="pass_leng">La contraseña debe ser de al menos 6 caracteres.</string>
+    <string name="usrn_emp">El nombre de usuario no puede estar vacío.</string>
+    <string name="mailpassfill">Email y contraseña deben estar rellenados.</string>
+    <string name="pass_match">Las contraseñas deben coincidir</string>
 </resources>

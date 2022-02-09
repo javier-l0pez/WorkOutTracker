@@ -39,4 +39,10 @@
     <string name="per_wk">Personal Workouts</string>
     <string name="img_set">Set Image</string>
     <string name="ex_del">Delete</string>
+    <string name="sgnup_succ">Signup successful</string>
+    <string name="sgnup_fl">Signup failed</string>
+    <string name="pass_leng">Password must be at least 6 characters length.</string>
+    <string name="usrn_emp">Username cannot be empty.</string>
+    <string name="mailpassfill">Email and password must be filled.</string>
+    <string name="pass_match">Passwords must match.</string>
 </resources>

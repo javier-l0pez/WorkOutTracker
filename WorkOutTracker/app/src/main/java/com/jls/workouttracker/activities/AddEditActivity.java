@@ -210,28 +210,34 @@ public class AddEditActivity extends AppCompatActivity {
             if (mUploadTask != null && mUploadTask.isInProgress()) {
                 Toast.makeText(getApplicationContext(), R.string.up_progress, Toast.LENGTH_SHORT).show();
             } else {
+
                 if (isUpdated) {
-                    uploadFile(exer_edit, new OnGetDataListener() {
-                        @Override
-                        public void onSuccess() {
-                            hashMap.put("img", exer_edit.getImg());
-                            daoedit.update(exer_edit.getKey(), hashMap).addOnSuccessListener(suc -> {
-                                Toast.makeText(getApplicationContext(), R.string.item_ex_up, Toast.LENGTH_SHORT).show();
-                                finish();
-                            }).addOnFailureListener(er -> Toast.makeText(getApplicationContext(), "" + er.getMessage(), Toast.LENGTH_SHORT).show());
 
-                        }
+                    if (mUploadTask != null && mUploadTask.isInProgress()) {
+                        Toast.makeText(getApplicationContext(), R.string.up_progress, Toast.LENGTH_SHORT).show();
+                    } else {
+                        uploadFile(exer_edit, new OnGetDataListener() {
+                            @Override
+                            public void onSuccess() {
+                                hashMap.put("img", exer_edit.getImg());
+                                daoedit.update(exer_edit.getKey(), hashMap).addOnSuccessListener(suc -> {
+                                    Toast.makeText(getApplicationContext(), R.string.item_ex_up, Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }).addOnFailureListener(er -> Toast.makeText(getApplicationContext(), "" + er.getMessage(), Toast.LENGTH_SHORT).show());
 
-                        @Override
-                        public void onStart() {
-                            Log.d("edit", "Ex edition started");
-                        }
+                            }
 
-                        @Override
-                        public void onFailure() {
-                            Log.d("onFailure", "Failed");
-                        }
-                    });
+                            @Override
+                            public void onStart() {
+                                Log.d("edit", "Ex edition started");
+                            }
+
+                            @Override
+                            public void onFailure() {
+                                Log.d("onFailure", "Failed");
+                            }
+                        });
+                    }
 
                 } else {
                     Log.d("imgup", "Not updated");
@@ -240,6 +246,7 @@ public class AddEditActivity extends AppCompatActivity {
                         finish();
                     }).addOnFailureListener(er -> Toast.makeText(getApplicationContext(), "" + er.getMessage(), Toast.LENGTH_SHORT).show());
                 }
+
             }
 
         });
