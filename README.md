@@ -24,6 +24,7 @@ Firebase and realtime database for login and storage of workouts. Also Firebase 
 * [X] Workouts database
 * [X] Workouts management
 * [X] Workout pictures
+* [X] Debug APK
 * [ ] Landing page
 * [ ] Video demonstration
 
