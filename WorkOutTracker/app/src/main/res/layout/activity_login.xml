@@ -15,8 +15,8 @@
         android:layout_marginTop="128dp"
         android:layout_marginRight="64dp"
         android:gravity="center"
-        android:text="Workout Tracker"
-        android:textColor="@color/colorB"
+        android:text="@string/app_title"
+        android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,13 +33,14 @@
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:ems="10"
-        android:hint="user@domain.tld"
+        android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_txt"
+            android:text="ee@ee.ee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
@@ -55,7 +56,7 @@
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="@string/pass"
         app:endIconMode="password_toggle"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +65,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pass_txt"
+            android:text="eeeeee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -79,7 +81,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
-        android:text="Log In"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass_lyt" />
@@ -94,7 +96,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
-        android:text="Sign Up"
+        android:text="@string/signup"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

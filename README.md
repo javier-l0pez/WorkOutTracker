@@ -11,7 +11,7 @@ A timer is also available from the top right corner, so the user can track how l
 ## Technologies
 
 Native Android with Java.
-Firebase and realtime database for login and storage of workouts.
+Firebase and realtime database for login and storage of workouts. Also Firebase Storage to store workout pictures.
 
 ## Mockup
 
@@ -20,12 +20,10 @@ Firebase and realtime database for login and storage of workouts.
 ## Goals
 
 * [X] Mockup\*
-* [ ] User database
-* [ ] Workouts database
-* [ ] Workouts management
-* [ ] Profile management
-* [ ] Profile pictures
-* [ ] Timer
+* [X] User database
+* [X] Workouts database
+* [X] Workouts management
+* [X] Workout pictures
 * [ ] Landing page
 * [ ] Video demonstration
 

@@ -1,9 +1,24 @@
 package com.jls.workouttracker.model;
 
-public class Exercise {
+import com.google.firebase.database.Exclude;
+
+import java.io.Serializable;
+
+public class Exercise implements Serializable {
+
+    @Exclude
+    private String key;
     private String name;
     private String muscle;
-    private int img;
+    private String img;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public String getName() {
         return name;
@@ -21,11 +36,25 @@ public class Exercise {
         this.muscle = muscle;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public Exercise() {
+    }
+
+    public Exercise(String name, String muscle) {
+        this.name = name;
+        this.muscle = muscle;
+    }
+
+    public Exercise(String name, String muscle, String img) {
+        this.name = name;
+        this.muscle = muscle;
         this.img = img;
     }
 }

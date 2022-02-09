@@ -7,17 +7,22 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/ex_name"
+        android:id="@+id/dialog_exname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Exercise Name"/>
+        android:hint="@string/ex_name"
+        android:autofillHints="@string/ex_name"
+        android:inputType="text"
+        android:importantForAutofill="yes"/>
 
     <EditText
-        android:id="@+id/ex_muscle"
+        android:id="@+id/dialog_exmuscle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ex_name"
-        android:hint="Main muscle"/>
+        app:layout_constraintTop_toBottomOf="@+id/dialog_exname"
+        android:hint="@string/ex_muscle"
+        android:inputType="text"
+        android:autofillHints="@string/ex_muscle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

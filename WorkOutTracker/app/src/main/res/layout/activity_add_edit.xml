@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorE"
+    tools:context=".activities.AddEditActivity">
+
+
+    <EditText
+        android:id="@+id/act_edit_exname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/ex_name"
+        android:autofillHints="@string/ex_name"
+        android:inputType="text"
+        android:importantForAutofill="yes"
+        android:textColor="@color/white"
+        android:textColorHint="@color/cardview_light_background"/>
+
+    <EditText
+        android:id="@+id/act_edit_exmuscle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit_exname"
+        android:hint="@string/ex_muscle"
+        android:inputType="text"
+        android:autofillHints="@string/ex_muscle"
+        android:textColor="@color/white"
+        android:textColorHint="@color/cardview_light_background"
+        />
+
+    <ImageView
+        android:id="@+id/image_view_set"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_edit_exmuscle" />
+
+    <Button
+        android:id="@+id/btn_update_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/img_set"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_set"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btn_update_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create/Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

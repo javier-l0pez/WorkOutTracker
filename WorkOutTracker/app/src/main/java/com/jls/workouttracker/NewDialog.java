@@ -2,20 +2,17 @@ package com.jls.workouttracker;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-import com.jls.workouttracker.activities.RegisterActivity;
-import com.jls.workouttracker.activities.WorksListActivity;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 
 public class NewDialog extends AppCompatDialogFragment {
     private EditText editTextName;
@@ -25,33 +22,27 @@ public class NewDialog extends AppCompatDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getActivity(), R.style.MyDialogTheme);
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_dialog_new, null);
 
         builder.setView(view)
-                .setTitle("New Exercise")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                .setTitle(R.string.ex_new)
+                .setNegativeButton(R.string.op_cancel, (dialog, which) -> {
 
-                    }
                 })
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (! editTextName.getText().toString().isEmpty() && ! editTextMuscle.getText().toString().isEmpty()) {
-                            String name = editTextName.getText().toString();
-                            String muscle = editTextMuscle.getText().toString();
-                            listener.applyTexts(name, muscle);
-                        } else {
-                        }
+                .setPositiveButton(R.string.op_ok, (dialog, which) -> {
+                    if (!editTextName.getText().toString().isEmpty() && !editTextMuscle.getText().toString().isEmpty()) {
+                        String name = editTextName.getText().toString();
+                        String muscle = editTextMuscle.getText().toString();
+                        listener.applyTexts(name, muscle);
+                    } else {
                     }
                 });
 
-        editTextName = view.findViewById(R.id.ex_name);
-        editTextMuscle = view.findViewById(R.id.ex_muscle);
+        editTextName = view.findViewById(R.id.dialog_exname);
+        editTextMuscle = view.findViewById(R.id.dialog_exmuscle);
 
         return builder.create();
     }
@@ -68,7 +59,7 @@ public class NewDialog extends AppCompatDialogFragment {
 
     }
 
-    public interface newDialogListener{
+    public interface newDialogListener {
         void applyTexts(String name, String muscle);
     }
 }

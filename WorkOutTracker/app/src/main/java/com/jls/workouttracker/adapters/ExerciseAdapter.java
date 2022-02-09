@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jls.workouttracker.ExampleItem;
 import com.jls.workouttracker.R;
 import com.jls.workouttracker.model.Exercise;
 
@@ -18,12 +17,13 @@ import java.util.ArrayList;
 
 public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder> {
 
-    Context context;
-
+    private Context context;
     private ArrayList<Exercise> mExerciseList;
-
     private int pos;
-    public int getPos() { return pos; }
+
+    public int getPos() {
+        return pos;
+    }
 
     public ExerciseAdapter(Context context, ArrayList<Exercise> mExerciseList) {
 //        this.context = context;
@@ -44,12 +44,9 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
         holder.textTitle.setText(currentItem.getName());
         holder.textMuscle.setText(currentItem.getMuscle());
-        holder.myImageView.setImageResource(currentItem.getImg());
+//        holder.myImageView.setImageResource(currentItem.getImg());
 
-//        holder.itemView.setOnLongClickListener(v -> {
-//            this.pos = position;
-//            return false;
-//        });
+
     }
 
     @Override
@@ -64,9 +61,9 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
         public ExerciseViewHolder(@NonNull View itemView) {
             super(itemView);
-            myImageView = itemView.findViewById(R.id.image_exercise);
-            textTitle = itemView.findViewById(R.id.text_view_exname);
-            textMuscle = itemView.findViewById(R.id.text_view_muscle);
+            myImageView = itemView.findViewById(R.id.item_image_exercise);
+            textTitle = itemView.findViewById(R.id.item_textview_exname);
+            textMuscle = itemView.findViewById(R.id.item_textview_muscle);
         }
     }
 
